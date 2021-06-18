@@ -1,11 +1,23 @@
-const alphabet = ["A", "B", "C", "D", "E", "F"];
-const numbers = ["1", "2", "3", "4", "5", "6"];
+const personOne = {
+  name: "Kyle",
+  age: 24,
+  favoriteFood: "Rice",
+  address: {
+    city: "Somewhere",
+    state: "One of them",
+  },
+};
 
-// const a = alphabet[0];
-// const b = alphabet[1];
+// const personTwo = {
+//   age: 32,
+//   favoriteFood: "Watermelon",
+// };
 
-const [a, , c, ...rest] = alphabet;
+// const personThree = { ...personOne, ...personTwo };
+// console.log(personThree);
 
-console.log(a);
-console.log(c);
-console.log(rest);
+function printUser({ name, age, favoriteFood = "Watermelon" }) {
+  console.log(`Name is ${name}. Age is ${age}. Food is ${favoriteFood}`);
+}
+
+printUser(personOne);
